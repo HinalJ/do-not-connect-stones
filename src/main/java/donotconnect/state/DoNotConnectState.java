@@ -1,5 +1,13 @@
 package donotconnect.state;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class DoNotConnectState {
     private char[][] board = new char[5][5];
 
