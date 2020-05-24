@@ -7,6 +7,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+@SuppressWarnings("unchecked")
 public class JAXBHelper {
 
     public static void toXML(Object o, OutputStream os) throws JAXBException {

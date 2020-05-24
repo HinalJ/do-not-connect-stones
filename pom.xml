@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>Don't-Connect-Stones</artifactId>
+    <artifactId>Do-not-Connect-Stones</artifactId>
     <version>1.0</version>
     <description>Don't Connect Stones Game</description>
     <developers>
