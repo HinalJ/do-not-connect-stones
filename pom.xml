@@ -8,6 +8,10 @@
     <artifactId>Do-not-Connect-Stones</artifactId>
     <version>1.0</version>
     <description>Don't Connect Stones Game</description>
+    <scm>
+        <developerConnection>scm:git:https://github.com/HinalJ/do-not-connect-stones.git</developerConnection>
+        <connection>scm:git:https://github.com/HinalJ/do-not-connect-stones.git</connection>
+    </scm>
     <developers>
         <developer>
             <id>HinalJ</id>

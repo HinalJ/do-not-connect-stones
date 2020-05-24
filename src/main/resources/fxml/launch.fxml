@@ -31,7 +31,7 @@
             <Font name="Jokerman" size="18.0" />
          </font></TextField>
 
-      <Button fx:id="startButton" layoutX="221.0" layoutY="292.0" mnemonicParsing="false" onAction="#startAction" prefHeight="51.0" prefWidth="151.0" text="Start game" textFill="#49da9a">
+      <Button fx:id="startButton" layoutX="221.0" layoutY="292.0" mnemonicParsing="false" onAction="#startAction" prefHeight="51.0" prefWidth="151.0" text="Start game" textAlignment="CENTER" textFill="#49da9a" wrapText="true">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font></Button>

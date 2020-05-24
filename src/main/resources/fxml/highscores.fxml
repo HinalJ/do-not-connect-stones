@@ -21,7 +21,7 @@
             <Font name="Jokerman" size="35.0" />
          </font>
       </Label>
-      <Button layoutX="261.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="51.0" prefWidth="122.0" text="Restart" textAlignment="CENTER">
+      <Button layoutX="261.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="51.0" prefWidth="122.0" text="Restart" wrapText="true">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font></Button>
