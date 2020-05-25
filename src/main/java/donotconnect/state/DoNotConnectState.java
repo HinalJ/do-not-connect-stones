@@ -3,11 +3,13 @@ package donotconnect.state;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 
+@Slf4j
 public class DoNotConnectState {
     private char[][] board = new char[5][5];
 
@@ -68,6 +70,7 @@ public class DoNotConnectState {
 
     public char draw(int row, int col, char turn)
     {
+        log.info("Added {} at ({},{})", turn=='o'? "Red Stone": "Blue Stone", row, col);
         board[row][col] = turn;
         return turn;
     }

@@ -8,7 +8,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class creatingResult {
 
     private GameResultList gameResultsList = new GameResultList();
@@ -17,8 +19,9 @@ public class creatingResult {
         try {
             this.gameResultsList = JAXBHelper.fromXML(GameResultList.class, new FileInputStream("Players.xml"));
         } catch (JAXBException e) {
-            e.printStackTrace();
+            log.error("JAXB exception catched {}", e.toString());
         } catch (FileNotFoundException e) {
+            log.error("File Not Found!");
             gameResultsList.setGameResultList(new ArrayList<>());
         }
     }
@@ -33,7 +36,7 @@ public class creatingResult {
         try {
             JAXBHelper.toXML(gameResultsList, new FileOutputStream("Players.xml"));
         } catch (JAXBException | FileNotFoundException e) {
-            e.printStackTrace();
+            log.error(e.toString());
         }
     }
 

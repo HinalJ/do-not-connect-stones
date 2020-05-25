@@ -11,10 +11,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 public class HighScoreController{
 
     private FXMLLoader fxmlLoader = new FXMLLoader();
@@ -41,6 +44,7 @@ public class HighScoreController{
 
     @FXML
     private void initialize() {
+        log.debug("Loading high scores...");
         List<GameResultList> highScoreList = getTop5Players();
 
         player.setCellValueFactory(new PropertyValueFactory<>("player"));
@@ -53,6 +57,8 @@ public class HighScoreController{
     }
 
     public void handleRestartButton(ActionEvent actionEvent) throws IOException {
+        log.debug("{} is pressed", ((Button) actionEvent.getSource()).getText());
+        log.info("Loading launch scene...");
         fxmlLoader.setLocation(getClass().getResource("/fxml/launch.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
