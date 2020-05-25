@@ -1,3 +1,4 @@
+// CHECKSTYLE:OFF
 package donotconnect.javafx;
 
 import javafx.application.Application;

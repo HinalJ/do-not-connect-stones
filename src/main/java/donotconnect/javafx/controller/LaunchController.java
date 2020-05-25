@@ -1,3 +1,4 @@
+// CHECKSTYLE:OFF
 package donotconnect.javafx.controller;
 
 import javafx.event.ActionEvent;

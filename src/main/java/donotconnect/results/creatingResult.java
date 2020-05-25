@@ -9,12 +9,20 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-
+/**
+ * Class creating the result of game.
+ */
 @Slf4j
 public class creatingResult {
 
+    /**
+     * Indicates the GameResultList class object.
+     */
     private GameResultList gameResultsList = new GameResultList();
 
+    /**
+     * Constructor creates a new file {@code Players.xml} if not found.
+     */
     public creatingResult() {
         try {
             this.gameResultsList = JAXBHelper.fromXML(GameResultList.class, new FileInputStream("Players.xml"));
@@ -26,7 +34,15 @@ public class creatingResult {
         }
     }
 
-
+    /**
+     * Following method add result to file {@code Players.xml} and gameResultsList.
+     * @param winnerName Player name who won.
+     * @param player1 Name of Player1.
+     * @param player2 Name of Player2.
+     * @param steps1 Number of Steps made by Player1.
+     * @param steps2 Number of Steps made by Player2.
+     * @param created Timestamp when the game ended.
+     */
     public void addResultData(String winnerName, String player1, String player2, int steps1, int steps2, String created){
 
         List<GameResult> gameResults = gameResultsList.getGameResultList();
@@ -40,6 +56,10 @@ public class creatingResult {
         }
     }
 
+    /**
+     * Getter for gameResultsList.
+     * @return Gets the list of the {@link GameResult} class.
+     */
     public List<GameResult> getGameResultsList() {
         return gameResultsList.getGameResultList();
     }

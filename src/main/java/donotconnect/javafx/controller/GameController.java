@@ -1,3 +1,4 @@
+// CHECKSTYLE:OFF
 package donotconnect.javafx.controller;
 
 import donotconnect.results.creatingResult;
@@ -40,7 +41,7 @@ public class GameController {
     private IntegerProperty steps1 = new SimpleIntegerProperty();
     private IntegerProperty steps2 = new SimpleIntegerProperty();
     private IntegerProperty steps = new SimpleIntegerProperty();
-    private List<Image> gemImages;
+    private List<Image> stoneImages;
     private int flag = 0;
 
     @FXML
@@ -70,7 +71,7 @@ public class GameController {
 
     @FXML
     public void initialize() {
-        gemImages = List.of(
+        stoneImages = List.of(
                 new Image(getClass().getResource("/images/red.png").toExternalForm()),
                 new Image(getClass().getResource("/images/blue.png").toExternalForm())
                 );
@@ -103,11 +104,11 @@ public class GameController {
                 }
                 if(gameState.getBoard()[i][j] == 'o')
                 {
-                    view.setImage(gemImages.get(0));
+                    view.setImage(stoneImages.get(0));
                 }
                 else if(gameState.getBoard()[i][j] == 'x')
                 {
-                    view.setImage(gemImages.get(1));
+                    view.setImage(stoneImages.get(1));
                 }
                 else
                     view.setImage(null);
