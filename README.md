@@ -34,3 +34,7 @@
 ## Requirements
 
 Building the project requires JDK 11 or later and [Apache Maven](https://maven.apache.org/).
+
+### Optional Requirements
+
+Download [Jokerman](https://fontzone.net/font-details/jokerman) and [Comic Sans MS Bold](http://www.911fonts.com/font/download_ComicSansMSBold_2266.htm) fonts on your system for better experience.
